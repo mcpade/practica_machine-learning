@@ -2,6 +2,36 @@
 
 # Machine Learning
 
+En este práctica se utilizan y comparan distintos algoritmos de Machine Learning para ser capaces de predecir el precio de viviendas de Airbnb. El código está desarrollado en Python
+
+Conceptos tratados en esta práctica:
+
+- Librerías **numpy**, **pandas** y **Sklearn** de Python 
+- División de datos en train y test
+- Limpieza y procesamiento de datos
+- Generación de nuevas características
+- Análisis exploratorio de variables de tipo numérico. Datos estadísticos, distribuciones
+- Tratamiento de outliers
+- Análisis exploratorio de variables de tipo categórico
+- Análisis exploratorio de variables de tipo booleano
+- Codificación de variables categóricas
+- Análisis de correlación
+- Estandarización y normalización
+- Modelos: Uso y comparativa
+     - Regresión Lineal
+     - Ridge regression
+     - Selección de características: Lasso
+     - Árbol de regresión
+     - Random forest
+     - Boosted trees
+     - SVR
+     
+
+
+
+
+
+
 ## Objetivo
 
 El objetivo de la práctica es simple: abordar un problema de Machine Learning realista siguiendo la metodología y buenas prácticas explicadas durante las clases teóricas. Por tanto, en estas instrucciones no se especifican los pasos exactos que el alumno tiene que llevar a cabo para realizar esta tarea con éxito; es parte del trabajo aplicar las técnicas de procesamiento/transformación de variables que mejor se acondicionen al problema, identificar los modelos que proporcionen prestaciones óptimas, las variables potencialmente más relevantes y la métrica adecuada para contrastar los distintos modelos. Las posibilidades son amplias, así que es recomendable abordar una aproximación incremental: comenzar por soluciones sencillas para progresivamente aumentar la complejidad de las técnicas utilizadas.
