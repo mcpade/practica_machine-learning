@@ -2,53 +2,52 @@
 
 # Machine Learning
 
-En este práctica se utilizan y comparan distintos algoritmos de Machine Learning para ser capaces de predecir el precio de viviendas de Airbnb. El código está desarrollado en Python
+In this practice, different Machine Learning algorithms are used and compared to be able to predict the price of Airbnb homes. The code is developed in Python
 
-Conceptos tratados en esta práctica:
+Concepts covered in this practice:
 
-- Librerías **numpy**, **pandas** y **Sklearn** de Python 
-- División de datos en train y test
-- Limpieza y procesamiento de datos
-- Generación de nuevas características
-- Análisis exploratorio de variables de tipo numérico. Datos estadísticos, distribuciones
-- Tratamiento de outliers
-- Análisis exploratorio de variables de tipo categórico
-- Análisis exploratorio de variables de tipo booleano
-- Codificación de variables categóricas
-- Análisis de correlación
-- Estandarización y normalización
-- Modelos: Uso y comparativa
-     - Regresión Lineal
-     - Ridge regression
-     - Selección de características: Lasso
-     - Árbol de regresión
-     - Random forest
-     - Boosted trees
-     - SVR
+- Python **numpy**, **pandas** and **Sklearn** libraries
+- Division of data in train and test
+- Cleaning and data processing
+- Generation of new features
+- Exploratory analysis of numerical variables. Statistical data, distributions
+- Treatment of outliers
+- Exploratory analysis of categorical variables
+- Exploratory analysis of Boolean variables
+- Coding of categorical variables
+- Correlation analysis
+- Standardization and normalization
+- Models: Use and comparison
+      - Linear regression
+      - Ridge regression
+      - Feature selection: Lasso
+      - Regression tree
+      - Random forest
+      - Boosted trees
+      - SVR
      
 
-## Enunciado
+## Statement
 
-El objetivo de la práctica es abordar un problema de Machine Learning realista siguiendo la metodología y buenas prácticas explicadas durante las clases teóricas. 
+The objective of the practice is to tackle a realistic Machine Learning problem following the methodology and good practices explained during the theoretical classes.
 
-**Problema de regresión: Predecir el precio del airbnb utilizando los datos disponibles**
+**Regression problem: Predict airbnb price using available data**
 
-Se valorará:
+It will be valued:
 
-• Generación de nuevas características a partir de las existentes
+• Generation of new features from existing ones
 
-• Codificación de variables
+• Coding of variables
 
-• Análisis exploratorio
+• Exploratory analysis
 
-• Selección y evaluación del modelo
+• Selection and evaluation of the model
 
-• Comparativa de distintos algoritmos
+• Comparison of different algorithms
 
 
+## Data set
 
-## Conjunto de datos
+The chosen data set is [éste](https://public.opendatasoft.com/explore/dataset/airbnb-listings/export/?disjunctive.host_verifications&disjunctive.amenities&disjunctive.features&q=Madrid&dataChart=eyJxdWVyaWVzIjpbeyJjaGFydHMiOlt7InR5cGUiOiJjb2x1bW4iLCJmdW5jIjoiQ09VTlQiLCJ5QXhpcyI6Imhvc3RfbGlzdGluZ3NfY291bnQiLCJzY2llbnRpZmljRGlzcGxheSI6dHJ1ZSwiY29sb3IiOiJyYW5nZS1jdXN0b20ifV0sInhBeGlzIjoiY2l0eSIsIm1heHBvaW50cyI6IiIsInRpbWVzY2FsZSI6IiIsInNvcnQiOiIiLCJzZXJpZXNCcmVha2Rvd24iOiJyb29tX3R5cGUiLCJjb25maWciOnsiZGF0YXNldCI6ImFpcmJuYi1saXN0aW5ncyIsIm9wdGlvbnMiOnsiZGlzanVuY3RpdmUuaG9zdF92ZXJpZmljYXRpb25zIjp0cnVlLCJkaXNqdW5jdGl2ZS5hbWVuaXRpZXMiOnRydWUsImRpc2p1bmN0aXZlLmZlYXR1cmVzIjp0cnVlfX19XSwidGltZXNjYWxlIjoiIiwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D&location=16,41.38377,2.15774&basemap=jawg.streets), extracted from Airbnb using scraping techniques. Among the options, I recommend using extract (“Only the 14780 selected records”), since it minimizes execution time and avoids memory problems on computers with fewer features.
 
-El conjunto de datos escogido es [éste](https://public.opendatasoft.com/explore/dataset/airbnb-listings/export/?disjunctive.host_verifications&disjunctive.amenities&disjunctive.features&q=Madrid&dataChart=eyJxdWVyaWVzIjpbeyJjaGFydHMiOlt7InR5cGUiOiJjb2x1bW4iLCJmdW5jIjoiQ09VTlQiLCJ5QXhpcyI6Imhvc3RfbGlzdGluZ3NfY291bnQiLCJzY2llbnRpZmljRGlzcGxheSI6dHJ1ZSwiY29sb3IiOiJyYW5nZS1jdXN0b20ifV0sInhBeGlzIjoiY2l0eSIsIm1heHBvaW50cyI6IiIsInRpbWVzY2FsZSI6IiIsInNvcnQiOiIiLCJzZXJpZXNCcmVha2Rvd24iOiJyb29tX3R5cGUiLCJjb25maWciOnsiZGF0YXNldCI6ImFpcmJuYi1saXN0aW5ncyIsIm9wdGlvbnMiOnsiZGlzanVuY3RpdmUuaG9zdF92ZXJpZmljYXRpb25zIjp0cnVlLCJkaXNqdW5jdGl2ZS5hbWVuaXRpZXMiOnRydWUsImRpc2p1bmN0aXZlLmZlYXR1cmVzIjp0cnVlfX19XSwidGltZXNjYWxlIjoiIiwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D&location=16,41.38377,2.15774&basemap=jawg.streets), extraído de Airbnb mediante técnicas de scraping. Dentro de las opciones recomiendo utilizar el extract (“Only the 14780 selected records”), ya que minimiza el tiempo de ejecución y evita problemas de memoria en equipos con menos prestaciones.
-
-El fichero csv que se obtiene en el momento de realizar la práctica se encuentra en la carpeta **data** de este repositorio
+The csv file that is obtained at the time of the practice is in the **data** folder of this repository
